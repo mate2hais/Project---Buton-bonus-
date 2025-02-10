@@ -1,7 +1,10 @@
-let i = 0;
-function changeColour() {
-  let color = ["yellow", "green", "red"];
-  document.getElementById("myButton").style.backgroundColor = color[i];
-  i = (i + 1) % color.length;
+let indexColor = 0;
+const color = ["yellow", "green", "red"];
+const THOUSAND = 1000;
+const TEN = 10;
+
+function changeColor() {
+  document.getElementById("myButton").style.backgroundColor = color[indexColor];
+  indexColor = (indexColor + 1) % color.length;
 }
-setInterval(changeColour, 1000 * 10);
+setInterval(changeColor, THOUSAND * TEN);
